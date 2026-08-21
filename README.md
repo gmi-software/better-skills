@@ -4,12 +4,12 @@ Open-source [Agent Skills](https://github.com/vercel-labs/skills) for AI coding 
 
 This repository covers GMI Software React Native libraries plus a neutral ecosystem skill for [`react-native-maps`](https://www.npmjs.com/package/react-native-maps).
 
-Repository: [gmi-software/agent-skills](https://github.com/gmi-software/agent-skills)
+Repository: [gmi-software/better-skills](https://github.com/gmi-software/better-skills)
 
 ## Install
 
 ```sh
-npx skills add gmi-software/agent-skills
+npx skills add gmi-software/better-skills
 ```
 
 Then pick the skills you want from the interactive selector.
@@ -17,10 +17,10 @@ Then pick the skills you want from the interactive selector.
 Install one skill:
 
 ```sh
-npx skills add gmi-software/agent-skills --skill react-native-maps
-npx skills add gmi-software/agent-skills --skill react-native-better-maps
-npx skills add gmi-software/agent-skills --skill react-native-better-clustering
-npx skills add gmi-software/agent-skills --skill react-native-pay
+npx skills add gmi-software/better-skills --skill react-native-maps
+npx skills add gmi-software/better-skills --skill react-native-better-maps
+npx skills add gmi-software/better-skills --skill react-native-better-clustering
+npx skills add gmi-software/better-skills --skill react-native-pay
 ```
 
 ## Skills
