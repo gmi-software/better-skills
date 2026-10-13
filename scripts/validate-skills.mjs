@@ -29,7 +29,7 @@ function normalizeSkillName(name) {
 }
 
 function parseFrontmatter(content, skillPath) {
-  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---(?=\r?\n|$)/);
   if (!match) {
     error(`${skillPath}: missing YAML frontmatter delimiters (---)`);
     return null;
@@ -209,7 +209,7 @@ async function validateSkillsShJson(validatedSkills) {
       referenced.add(normalized);
 
       if (!knownNames.has(normalized)) {
-        warn(
+        error(
           `${label}: references unknown skill "${skillName}" (not found under skills/)`
         );
       }
