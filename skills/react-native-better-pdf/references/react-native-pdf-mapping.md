@@ -186,7 +186,7 @@ Every `<Pdf>` without `renderActivityIndicator` showed react-native-pdf's progre
 ```diff
 - onPressLink={(url) => Linking.openURL(url)}
 + onLinkPress={({ url }) => {
-+   if (url.startsWith('https://')) Linking.openURL(url); // a PDF is untrusted input
++   if (/^(https?|mailto):/i.test(url)) Linking.openURL(url); // a PDF is untrusted input
 + }}
 ```
 

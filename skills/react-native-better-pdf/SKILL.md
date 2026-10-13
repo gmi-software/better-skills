@@ -53,7 +53,8 @@ import { ActivityIndicator, Linking, StyleSheet, Text, View } from 'react-native
 import { PdfView } from 'react-native-better-pdf';
 
 export function Reader({ uri }: { uri: string }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [settledUri, setSettledUri] = useState<string>(); // the document that loaded or failed
+  const isLoading = settledUri !== uri;
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(0);
 
@@ -64,10 +65,10 @@ export function Reader({ uri }: { uri: string }) {
         source={{ uri }}
         onLoad={(event) => {
           setPageCount(event.pageCount);
-          setIsLoading(false);
+          setSettledUri(uri);
         }}
         onError={(error) => {
-          setIsLoading(false);
+          setSettledUri(uri);
           console.warn(error.code, error.message);
         }}
         onPageChange={({ page }) => setPage(page)}

@@ -11,11 +11,13 @@ pdf.current?.search(query);   // a new query restarts the search; '' clears it
 pdf.current?.searchNext();    // or searchPrevious(); both wrap around
 pdf.current?.clearSearch();
 
-// "3 / 17", or "3 / 17…" while the rest of the document is still searched
+// "3 / 17", "3 / 17…" while the rest of the document is still searched, '' without a query
 const label =
   search?.isSupported === false
     ? 'Search unavailable'
-    : `${(search?.currentMatch ?? -1) + 1} / ${search?.matchCount ?? 0}${search?.isComplete ? '' : '…'}`;
+    : search?.query
+      ? `${(search.currentMatch ?? -1) + 1} / ${search.matchCount}${search.isComplete ? '' : '…'}`
+      : '';
 ```
 
 - Native and in the background, case-insensitive. Matches are highlighted as pages are searched, starting at the current page; the first match at or after it becomes current and is scrolled into view.
