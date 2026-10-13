@@ -61,6 +61,7 @@ export function Reader({ uri }: { uri: string }) {
   return (
     <View style={{ flex: 1 }}>
       <PdfView
+        key={uri} // events carry no source: a new viewer per document keeps a late event from the previous one apart
         style={{ flex: 1, backgroundColor: '#E4E4E7' }}
         source={{ uri }}
         onLoad={(event) => {
