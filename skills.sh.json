@@ -1,0 +1,22 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Maps",
+      "description": "MapView skills for react-native-maps and GMI native map libraries.",
+      "skills": [
+        "react-native-maps",
+        "react-native-better-maps",
+        "react-native-better-clustering"
+      ]
+    },
+    {
+      "title": "Payments",
+      "description": "Apple Pay and Google Pay with @gmisoftware/react-native-pay.",
+      "skills": [
+        "react-native-pay"
+      ]
+    }
+  ]
+}
