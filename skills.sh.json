@@ -12,6 +12,13 @@
       ]
     },
     {
+      "title": "Documents",
+      "description": "PDF viewing with react-native-better-pdf, including migration from react-native-pdf.",
+      "skills": [
+        "react-native-better-pdf"
+      ]
+    },
+    {
       "title": "Payments",
       "description": "Apple Pay and Google Pay with @gmisoftware/react-native-pay.",
       "skills": [
