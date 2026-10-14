@@ -1,0 +1,11 @@
+{
+  "name": "@gmi-software/better-skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-skills.mjs"
+  },
+  "dependencies": {
+    "yaml": "2.9.0"
+  }
+}
